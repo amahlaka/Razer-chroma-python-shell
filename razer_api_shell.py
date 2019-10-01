@@ -1,3 +1,15 @@
+'''
+RΛZΞR Chroma Shell.
+https://github.com/amahlaka/Razer-chroma-python-shell
+
+Simple tool to try out the Razer Chroma API using python.
+Install requirements with: pip install -r requirements.txt
+
+You are free to use this any way you like
+
+Created by: Arttu Mahlakaarto (Amahlaka)
+Version: 0.4-Alpha
+'''
 import webcolors
 import threading
 import requests
