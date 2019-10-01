@@ -21,3 +21,7 @@ controls - set color only on keys usually used for gaming
 check - show the current number of keepalive pings
 quit - disconnect from api and exit
 ```
+
+#### Contributing:
+Feel free to fork and edit the code.  
+If you come up with a new feature, feel free to create a pull request.

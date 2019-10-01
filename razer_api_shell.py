@@ -1,3 +1,15 @@
+'''
+RΛZΞR Chroma Shell.
+https://github.com/amahlaka/Razer-chroma-python-shell
+
+Simple tool to try out the Razer Chroma API using python.
+Install requirements with: pip install -r requirements.txt
+
+You are free to use this any way you like
+
+Created by: Arttu Mahlakaarto (Amahlaka)
+Version: 0.4-Alpha
+'''
 import webcolors
 import threading
 import requests
@@ -5,10 +17,13 @@ import time
 
 
 def RGBtoBRG(rgb):
+    '''Changes the color from RGB format to BRG format. '''
     print(rgb)
     for indx, color in enumerate(rgb):
-        if rgb[indx] == 0:
+        
+        if color == 0:
             rgb[indx] = rgb[indx] + 1
+            
     red = rgb[0]
     green = rgb[1]
     blue = rgb[2]
@@ -54,10 +69,10 @@ class Razer_api():
     }
     sdk_information = {
         "title": "Razer Chroma SDK Python shell",
-        "description": "This is a python shell that controls the SDK",
+        "description": "Example usage of Chroma API thru Python",
         "author": {
             "name": "Arttu M.",
-            "contact": "www.razerzone.com"
+            "contact": "https://github.com/amahlaka/Razer-chroma-python-shell/issues"
         },
         "device_supported": [
             "keyboard",
@@ -114,6 +129,7 @@ class Razer_api():
         for indx,row in enumerate(local_palette['param']['color']):
             for index,column in enumerate(row):
                 local_palette['param']['color'][indx][index] = color
+                print(column)
         self.color_palette = local_palette
         self.send_palette(self.color_palette)
 
