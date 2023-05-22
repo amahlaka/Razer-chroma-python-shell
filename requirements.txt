@@ -1,5 +1,5 @@
 chardet==3.0.4
 colorama==0.4.1
 pyreadline==2.1
-requests==2.22.0
+requests==2.31.0
 webcolors==1.10
